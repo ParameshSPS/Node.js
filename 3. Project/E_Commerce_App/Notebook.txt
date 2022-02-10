@@ -1,0 +1,80 @@
+// E-Commerce App Design
+
+//------------------------------------ App Overview ----------------------------//
+
+* Item List
+* Shopping Cart
+* Admin Panel
+* Sign up/in
+
+-----------------------------
+|                           |       
+|                           |                  Request                  
+|                           |        ----------------------->
+|           Web             |                                       
+|                           |                                           Node JS Server / File-based Data Store 
+|                           |
+|                           |        <-----------------------
+|                           |               HTML Doc
+-----------------------------
+
+
+// Start Project
+
+* Ceate Folder ( mkdir Filename) ---> (change path) cd Filename
+* Generate packagae.json file ( npm init -y )
+* npm install express nodemon
+* create file (index.js)
+* Edit Package.json file
+    "scripts": {
+    "dev": "nodemon index.js"
+  },
+* npm run dev
+
+-----------------------------
+|                           |       
+|                           | ----->   HTTP Request         ------> Your Operating System         
+|                           |        Host: 'localhost'
+|    localhost:3000/        |        Port: 3000 (2999 to 3003)                              
+|                           |        Path: '/'               
+|                           |        Method: GET
+|                           |        
+|                           |          
+-----------------------------
+
+
+//------------------------------------------- Design a Custom Database -----------------------------------//
+
+* Express Server ------>  Data Store 1. List of users / 2. List of products
+* Data Store ------> product.json / users.json
+
+* nodejs.org/api --> file System 
+
+
+//------------------------------------------- Authentication -----------------------------------//
+
+* npm install cookie-session
+* npm run dev
+
+* SHA256 calculator (Hash algorithm)
+
+user sign up/in  -------> Hash ---------> Store this in Database
+
+"mypassword "             Hash              89e01536ac2....                          
+
+* node.org/api ---> crypto
+
+
+//------------------------------------------- Structuring -----------------------------------//
+
+* npm install express-validator
+* npm run dev
+
+//------------------------------------------- Product New -----------------------------------//
+
+*  enctype="application/x-www-form-urlencoded"
+
+//------------------------------------------- File Upload -----------------------------------//
+
+* npm install multer
+* npm run dev
